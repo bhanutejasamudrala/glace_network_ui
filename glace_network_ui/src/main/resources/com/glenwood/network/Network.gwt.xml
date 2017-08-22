@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='network'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- We need the JUnit module in the main module, -->
+	<!-- otherwise eclipse complains (Google plugin bug?) -->
+
+	<!--SuperDev Mode -->
+	<!-- <add-linker name="xsiframe"/>
+	<set-configuration-property name="devModeRedirectEnabled" value="true"/>
+	<set-property name="compiler.useSourceMaps" value="true"/> -->
+	
+	<!-- add-linker name="xsiframe"/> <set-configuration-property name="devModeRedirectEnabled" 
+		value="true"/-->
+		
+	
+
+	<set-property name="user.agent" value="safari" />
+
+	<!-- Other module inherits -->
+
+	<!-- We need the MVP stuff (Activity and Place -->
+	<!-- I am also using DepInj with Gin (Inject) -->
+	<!-- and Resource for client bundle and stuff (not used yet) -->
+
+	<inherits name="com.google.gwt.activity.Activity" />
+	<inherits name="com.google.gwt.place.Place" />
+	<inherits name="com.google.gwt.inject.Inject" />
+	<inherits name="com.google.gwt.resources.Resources" />
+	<inherits name="com.google.gwt.user.Debug" />
+	<inherits name="org.fusesource.restygwt.RestyGWT"/>
+	<inherits name='com.allen_sauer.gwt.dnd.gwt-dnd'/>
+	<inherits name="org.gwtbootstrap3.GwtBootstrap3"/>
+	<inherits name="gwtupload.GWTUpload" />
+	
+	<!-- Specify the app entry point class. -->
+	<entry-point class='com.glenwood.network.client.Network' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!-- Form Factors -->
+	<inherits name="com.glenwood.network.FormFactor" />
+	
+
+	<define-configuration-property name="gin.ginjector"
+		is-multi-valued="false" />
+	<set-configuration-property name='gin.ginjector'
+		value='com.glenwood.network.client.ioc.ClientGinjector' />
+
+</module>

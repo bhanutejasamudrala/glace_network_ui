@@ -1,0 +1,43 @@
+
+Installing GIT on the server/machine >> procedure1
+-----------------------------------------
+wget https://git-core.googlecode.com/files/git-1.8.1.2.tar.gz
+tar -zxf git-1.8.1.2.tar.gz
+cd git-1.8.1.2
+
+
+
+Installing GIT on the server/machine >> procedure2
+---------------------------------------
+
+yum install git
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+
+
+
+Check whether GIT is installed on the machine
+------------------------------------------------
+git --version
+
+
+Start checking out the project 
+------------------------------
+1.git init
+
+Set up GIT configuration for checking out the project >> use the mail id that is given in cs.glaceemr.com
+-----------------------------------------------------
+If mail id is not registered in GIT HUB then register in GIT HUB
+
+git config --global user.name "NewUser"
+git config --global user.email newuser@example.com
+
+git config --list
+
+
+
+
+Check out the project
+--------------------- 
+Drive to the location where the project is to be checked out
+
+git clone ssh://URL

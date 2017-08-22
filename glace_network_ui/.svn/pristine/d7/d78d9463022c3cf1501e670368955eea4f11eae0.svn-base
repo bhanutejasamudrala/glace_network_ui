@@ -1,0 +1,75 @@
+/*styles for the cell list widget*/
+.cellListWidget {
+	color: #3E3E3E;
+	font-size: 18px;
+	font-family: kalinga;
+	background-color: #EBECEE !important;
+	padding: 2% 0% 2% 0% !important;
+	font-size : 16px;
+	line-height:20px;	
+}
+
+/*styles for the odd items in the cell list widget*/
+.cellListEvenItem {
+	color: #3E3E3E;
+	cursor: pointer;
+	zoom: 1;
+	background: transparent;
+	padding: 2% 0% 2% 4% !important;
+	font-size : 16px;
+}
+
+/*styles for the odd items in the cell list widget*/
+.cellListOddItem {
+	color: #3E3E3E;
+	cursor: pointer;
+	zoom: 1;
+	background: transparent;	
+	padding: 2% 0% 2% 4% !important;
+	font-size : 16px;
+}
+
+/*styles for the cell list widget on mouseover*/
+.cellListWidget:hover {
+	color: #FFFFFF !important;
+	font-size: 18px;
+	background-color: #EBECEE !important;
+	padding: 2% 0% 2% 0% !important;
+	font-size : 16px;
+}
+
+/*styles for the odd items on mouseover in the cell list widget*/
+.cellListEvenItem:hover {
+	color: #FFFFFF !important;
+	cursor: pointer;
+	zoom: 1;
+	background: #1EB5D8 !important;
+	border-bottom: 1px solid lightgrey;
+	padding: 2% 0% 2% 4% !important;
+	font-size : 16px;
+}
+
+/*styles for the odd items on mouseover in the cell list widget*/
+.cellListOddItem:hover {
+	color: #FFFFFF !important;
+	cursor: pointer;
+	zoom: 1;
+	background: #1EB5D8 !important;
+	border-bottom: 1px solid lightgrey;
+	padding: 2% 0% 2% 4% !important;
+	font-size : 16px;
+}
+
+/*Styles for the selected items in the cell list widget*/
+.cellListKeyboardSelectedItem {
+	background: #FFFFFF !important;
+	color: #3E3E3E !important;
+	border-right : 5px solid #119DC9;
+}
+
+/*Styles for the selected items in the cell list widget*/
+.cellListSelectedItem {
+	background: #FFFFFF !important;
+	color: #3E3E3E !important;
+	border-right : 5px solid #119DC9;
+}

@@ -1,0 +1,356 @@
+
+/* make keyframes that tell the start state and the end state of our object */
+		@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+		@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+		@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+		
+.pageloadFadeIn {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:0.2s;
+    -moz-animation-duration:0.2s;
+    animation-duration:0.2s;
+    
+}
+
+body{
+	font-size: 14px !important;
+}
+
+.header {
+	/* display: inline-block; */
+	background-color: #119dc9 !important;
+	color : #FFFFFF;
+	width:100%;
+	height: 100%;
+    text-align: right;
+    vertical-align: middle;  
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+}
+
+.logo {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 75px;
+	height: 90px;
+}
+
+.leftPanel {
+	background-color: #343C4B !important;
+	font-size: 12px;
+}
+
+.networkSelector{
+	font-size: 16px !important;
+    color: white;
+    width: 220px !important;
+    cursor: pointer;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.networkSelector:AFTER {
+	font-family:customicons;
+	content: "\e60a";
+	display: inline-block;
+  	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	padding-left: 7px;
+}
+
+.networkItemContainer{
+	overflow-x: hidden !important;
+    overflow-y: scroll !important;
+}
+
+.networkItem:hover div {
+	color: white;
+}
+
+.networkItem:hover {
+	background: none repeat scroll 0% 0% #119DC9 ! important;
+	border-radius: 2px 2px 2px 2px;
+}
+
+.networkItem {
+	height: 30px;
+	margin-left: 2px;
+	width: 150px;
+	line-height: 30px;
+}
+
+.networkListPopup {
+	background: none repeat scroll 0px 0px #F1F1F1;
+	border: medium none ! important;
+	box-shadow: 0 0 15px #999999;
+	margin-left: -15px !important;
+	padding: 10px;
+    right: 15px !important;
+    left:86% !important;
+	top: 9% !important;
+}
+
+.networkListPopup:after {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: rgba(136, 183, 213, 0) rgba(136, 183, 213, 0) #F1F1F1;
+	border-image: none;
+	border-style: solid;
+	border-width: 10px;
+	bottom: 100%;
+	content: " ";
+	height: 0px;
+	left: 88%;
+	pointer-events: none;
+	position: absolute;
+	right: 50%;
+	width: 0px;
+	cursor: pointer !important;
+	
+}
+
+.leftMenuItem{
+	font-size: 14px !important;
+    color: #c4cadd;
+    text-align: justify;
+    padding-top: 7px;
+    padding-left: 5px;
+    line-height: 20px;
+    width: 100%;
+    display: inline-block !important;
+    height: 35px;
+}
+
+.leftMenuItemLabel{
+	display: block;
+    position: absolute;
+    margin-left: 35px;
+}
+
+.headerIconFont{
+	font-family: customicons;
+    font-size: 28px;
+	margin-left: 9px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+
+.customfont{
+	font-family: customicons;
+    font-size: 28px;
+    position: absolute;
+}
+
+.customFontMin{
+	font-family: customicons;
+    font-size: 16px;
+    position: absolute;
+}
+
+.leftMenuButton{
+	position: absolute;
+    height: 35px;
+    width: 139px;
+    opacity: 0;
+    margin-top: -8px;
+    margin-left: -5px;
+    z-index: 9999999;
+}
+
+.leftMenuButton:HOVER{
+	opacity: 0.1;
+	cursor: pointer; 
+}
+
+.leftMenuButton:ACTIVE{
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.leftMenuSubButton{
+    position: absolute;
+    height: 18px;
+    width: 106px;
+    opacity: 0;
+    margin-top: -1px;
+    margin-left: -52px;
+	z-index: 99999999;
+}
+
+.addEditMenu{
+	display: block;
+    margin-left: 20px;
+    background-color: #4D5865;
+    color: #FFF;
+    padding: 5px;
+}
+
+.adddEditButton{
+	display:block;
+	height:20px;
+}
+
+.leftMenuItemSubLabel{
+      margin-left: -40px;
+    line-height: 16px;
+}
+
+.leafElement{
+	display: block;
+    background: transparent;
+    border: none;
+    color: white;
+    width: 105%;
+    text-align: justify;
+    outline: none;
+    padding: 1px;
+	height: 20px;
+}
+
+.leafElement:HOVER{
+	background: #414B56;
+}
+
+.leafElementWraper{
+	 display: block;
+    text-align: justify;
+    margin-left: 25px;
+}
+
+.roatate{
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.mainBody{
+	overflow: hidden;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+}
+
+.canvasContainer{
+	display: block; 
+	overflow: hidden;
+	border: 1px solid #D6D6D6;
+	margin: 7px;
+}
+
+.visuializationHeader{
+    background-color: #d6d6d6;
+    color: #fff;
+    display: inline-flex;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.windowTitle{
+	float: left;
+	font-weight: bold;
+}
+
+.windowControl{
+	font-family: customicons;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    right: 25px;
+    
+}
+
+.windowControl:HOVER {
+	color: #EEE;
+}
+
+.topMenuItem{
+	color:#FFF;
+	width: 190px;
+	vertical-align: middle;
+	float: right;
+}
+
+
+.algorithmLabel{
+	color: #fff;
+	text-align: justify;
+}
+
+.graphPopup{
+	
+}
+
+.floatingSummary{
+	border: medium none !important;
+    box-shadow: 0 0 5px #CCCCCC;
+    padding: 0 !important;
+    width: 100px;
+    outline: none;
+}
+
+.summaryImage{
+	border: 1px solid #D6D6D6 !important;
+}
+
+.windowHeader div {
+	color: white;
+    text-align: left !important;
+    margin-left: 4px;
+    font-weight: bold;
+}
+
+.windowHeader {
+	height: 25px !important;
+	width: 100% !important;
+	background: none repeat scroll 0 0 #D6D6D6;
+    color: #fff;
+    overflow: hidden;
+}
+
+.imageViewport{
+	display: block;
+	border: 1px solid #119DC9;
+}
+
+.historyLabel{
+	color: #FFF;
+	width: 40px;
+}
+
+.historyLabel:BEFORE {
+	content: "\2329";
+    color: white;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+.nodeTooltip{
+	background-color: #FFF;
+    box-shadow: 0px 0px 15px #D6D6D6;
+    padding: 5px;
+}
+

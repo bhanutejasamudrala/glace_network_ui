@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:FlowPanel>
+			<g:ScrollPanel alwaysShowScrollBars="false">
+				<g:FlowPanel height="500px" >
+					<g:RadioButton text="Manual upload" name="uploadChoice" ui:field="manualUpload"/>
+					<g:RadioButton text="Upload using file" name="uploadChoice" ui:field="uploadUsingFile"/>
+					<g:FlowPanel ui:field="uploadPanel"/>
+				</g:FlowPanel>
+			</g:ScrollPanel>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

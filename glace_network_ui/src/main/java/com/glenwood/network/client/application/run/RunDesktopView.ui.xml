@@ -1,0 +1,96 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:up="urn:import:gwtupload.client">
+	
+	<ui:with field="resources"
+		type="com.glenwood.network.client.resource.DesktopResources" />
+	<ui:style>
+	.fontstyle {
+		font-weight: bold;
+	}
+	.secondWindow{
+		margin-top: 4%;
+	}
+	.inflex{
+		display: inline-flex;
+	}
+	.olnone{
+		outline: none;
+	}
+	.inflexcenter{
+		display: flex;
+    	align-items: center;
+	}
+	.mrlft{
+		margin-left: 30%;
+	}
+	
+	</ui:style>
+	<g:HTMLPanel styleName='{resources.desktopstyles.pageloadFadeIn}' ui:field="RunMainPanel" width="100%" height="100%">
+		<g:FlowPanel width="99%" height="48%" styleName="{resources.windowstyles.window}">
+			<g:FlowPanel  styleName="{resources.windowstyles.windowHeader}">
+				<g:Label text="Run" styleName="{resources.windowstyles.windowHeaderTitle}"/>
+			</g:FlowPanel>
+			<g:FlowPanel  styleName="{resources.windowstyles.windowBody}">
+				<g:FlowPanel styleName="{resources.runpanelstyles.line}"/>
+				<g:FlowPanel styleName="{resources.runpanelstyles.runPanelNavigator}">
+					<g:FlowPanel width="100%" height="100%" styleName="{style.inflex}">
+						<g:FlowPanel styleName="{resources.runpanelstyles.stepWraper}" >
+							<g:FocusPanel ui:field="upload" styleName="{style.olnone}">
+							<g:FlowPanel>
+								<g:Label ui:field="stc1" styleName="{resources.runpanelstyles.stepCountActive}" text="1"/>
+								<g:Label styleName="{resources.runpanelstyles.stepCountLabel}" text="upload"/>
+							</g:FlowPanel>
+							</g:FocusPanel>
+						</g:FlowPanel>
+						<g:FlowPanel styleName="{resources.runpanelstyles.stepWraper}">
+							<g:FocusPanel ui:field="input" styleName="{style.olnone}">
+							<g:FlowPanel>
+								<g:Label ui:field="stc2" styleName="{resources.runpanelstyles.stepCount}" text="2"/>
+								<g:Label styleName="{resources.runpanelstyles.stepCountLabel}" text="input"/>
+							</g:FlowPanel>
+							</g:FocusPanel>
+						</g:FlowPanel>
+						<g:FlowPanel styleName="{resources.runpanelstyles.stepWraper}">
+							<g:FocusPanel ui:field="output" styleName="{style.olnone}">
+							<g:FlowPanel>
+								<g:Label ui:field="stc3" styleName="{resources.runpanelstyles.stepCount}" text="3"/>
+								<g:Label styleName="{resources.runpanelstyles.stepCountLabel}" text="output"/>
+							</g:FlowPanel>	
+							</g:FocusPanel>
+						</g:FlowPanel>
+						<g:FlowPanel styleName="{resources.runpanelstyles.stepWraper}">
+							<g:FocusPanel ui:field="run" styleName="{style.olnone}">
+							<g:FlowPanel>
+								<g:Label ui:field="stc4" styleName="{resources.runpanelstyles.stepCount}" text="4"/>
+								<g:Label styleName="{resources.runpanelstyles.stepCountLabel}" text="run"/>
+							</g:FlowPanel>
+							</g:FocusPanel>
+						</g:FlowPanel>
+					</g:FlowPanel>
+				</g:FlowPanel>
+				<g:FlowPanel styleName="{resources.runpanelstyles.runPanelBody}">
+					<g:FlowPanel ui:field="fileUploadBody" width="100%" height="50%"> 
+					
+						<g:FlowPanel width="100%" styleName="{style.inflex}">
+							<g:Label text="Choose File" styleName="{style.inflexcenter}"/>
+							<up:MultiUploader ui:field="uploader" title="uploadFile" styleName="{style.mrlft}"/>
+						</g:FlowPanel>
+						
+					</g:FlowPanel>
+					<g:FlowPanel ui:field="inputBody" visible="false"/>
+					<g:FlowPanel ui:field="outputBody" visible="false"/>
+					<g:FlowPanel ui:field="runBody" visible="false"/>
+				</g:FlowPanel>
+			</g:FlowPanel>
+		</g:FlowPanel>
+		<g:FlowPanel width="99%" height="48%" styleName="{resources.windowstyles.window} {style.secondWindow}">
+			<g:FlowPanel  styleName="{resources.windowstyles.windowHeader}"></g:FlowPanel>
+			<g:FlowPanel   styleName="{resources.windowstyles.windowBody}">
+											
+			</g:FlowPanel>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

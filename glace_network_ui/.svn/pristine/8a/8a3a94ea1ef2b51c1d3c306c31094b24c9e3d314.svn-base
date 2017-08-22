@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+.window{
+	border: 1px solid #D6D6D6;
+	display: block; 
+	overflow: hidden;	
+}
+
+.windowHeader {
+	background-color: #d6d6d6;
+	color: #fff;
+	display: inline-flex;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.windowHeaderTitle {
+	float: left;
+    font-weight: bold;
+}
+
+.windowHeaderController{
+	width: 15px;
+    float: right;
+    display: block;
+    font-family: customicons;
+    font-weight: bold;
+    font-size: large;
+}
+
+.windowBody{
+	width: 100%;
+	height: 92%;
+	margin-top: -1%;
+}

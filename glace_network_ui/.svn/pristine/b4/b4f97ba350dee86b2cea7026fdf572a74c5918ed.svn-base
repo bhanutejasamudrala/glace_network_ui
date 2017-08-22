@@ -1,0 +1,255 @@
+
+/** Add css rules here for your application. */
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+	-moz-tap-highlight-color: rgba(0,0,0,0) !important;
+    
+}
+.gwt-PopupPanel{
+z-index:2;
+}
+.gwt-PopupPanelGlass
+{
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index:2;
+}
+  @media all and (orientation:portrait)
+{
+  body{width:100%;}
+  body{height:100%;}
+}
+
+@media all and (orientation:landscape)
+{
+  body{width:100%;}
+  body{height:100%;}
+}
+
+@font-face {
+	font-family: icons;
+	src: url(fonts/icons.ttf);
+}
+
+@font-face {
+	font-family: kalinga;
+	src: url(fonts/kalinga.ttf);
+}
+@font-face {
+	font-family: kalingab;
+	src: url(fonts/kalingab.ttf);
+}
+@font-face { 
+	font-family : Trebuchet;
+	src : url(fonts/Trebuchet MS.ttf);
+}
+@font-face{
+	font-family: customicons;
+	src: url(fonts/customicons.ttf);
+}
+html {
+	overflow: hidden;
+    width: 100%;
+    font-family: arial,sans-serif;
+    font-size: 81.25%;
+    height: 100%;
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+   width: 100%;
+   height: 100%;
+   font-family: arial,sans-serif;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+.gwt-ListBox{
+	 font-family: arial,sans-serif;
+	 background-color:white;
+     border:1px solid #CECECE;
+     border-radius: 0 !important;
+     color: #9e9e9e;
+     font-size: 16px;
+     background: none repeat scroll 0 0 #FFFFFF;
+     height: 32px;
+}
+.gwt-DatePicker {
+   border: 1px solid #ccc;
+   border-top:1px solid #999;
+   cursor: default;
+}
+.gwt-DatePicker td,
+.datePickerMonthSelector td:focus {
+   outline: none;
+  
+}
+.datePickerMonthSelector td:focus {
+   outline: none;
+    color:#d8f1f9;
+}
+.datePickerDays {
+   width: 100%;
+   background: white;
+}
+.datePickerDay,
+.datePickerWeekdayLabel,
+.datePickerWeekendLabel {
+   font-size: 85%;
+   text-align: center;
+   padding: 10px;
+   outline: none;
+   font-weight:bold;
+   color:#333;
+   border-right: 1px solid #EDEDED;
+   border-bottom: 1px solid #EDEDED;
+}
+.datePickerWeekdayLabel,
+.datePickerWeekendLabel {
+   background: #fff;
+   padding: 9px 10px 10px;
+   cursor: default;
+   color:#666;
+   font-size:75%;
+   font-weight:normal;
+}
+.datePickerDay {
+   padding: 10px 10px;
+   cursor: hand;
+   cursor: pointer;
+}
+.datePickerDayIsWeekend {
+   background: #f7f7f7;
+}
+.datePickerDayIsFiller {
+   color: #999;
+   font-weight:normal;
+}
+.datePickerDayIsValue {
+   background: #d8f1f9;
+}
+.datePickerDayIsDisabled {
+   color: #AAAAAA;
+   font-style: italic;
+}
+.datePickerDayIsHighlighted {
+   background: #d8f1f9;
+}
+.datePickerDayIsValueAndHighlighted {
+   background: #d8f1f9;
+}
+.datePickerDayIsToday {
+   padding: 10px;
+   color: #119dc9;
+   background: url(images/hborder.png) repeat-x 0px -2607px;
+}
+.datePickerMonthSelector {
+   width: 100%;
+   height:50%;
+   padding: 2px 0 6px 0;
+   background:#d8f1f9;
+}
+.datePickerPreviousButton,
+.datePickerNextButton {
+   font-size: 120%;
+   line-height: 1em;
+   color: #5b6163;
+   cursor: hand;
+   cursor: pointer;
+   font-weight: bold;
+   padding: 0px 4px;
+   outline: none;
+}
+td.datePickerMonth {
+   text-align: center;
+   vertical-align: middle;
+   white-space: nowrap;
+   font-size: 100%;
+   font-weight: bold;
+   color: #5b6163;
+}
+.gwt-DateBox {
+   padding: 10px 10px;
+   border: 1px solid #ccc;
+   border-top: 1px solid #999;
+   font-size: 100%;
+}
+.gwt-DateBox input {
+   width: 8em;
+}
+.dateBoxFormatError {
+   background: #ffcccc;
+}
+.dateBoxPopup {
+}
+.gwt-TextBox {
+	border: 1px solid #CECECE;
+    border-radius: 0 !important;
+    color:#9E9E9E;
+    font-size: 16px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-family: arial,sans-serif;
+    height: 32px;
+    padding: 0 0 0 5px !important;
+}
+
+.gwt-TextBox:focus {
+	 border: 1px solid #119DC9 !important;
+	 border-radius: 0 !important;
+    color:#9E9E9E;
+    font-size: 16px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-family: arial,sans-serif;
+    height: 32px;
+}
+.gwt-TextArea{
+	font-family: arial,sans-serif;
+	color: #9e9e9e;
+     font-size: 16px;
+     resize: none;
+     border: 1px solid #CECECE;
+     border-radius: 0 !important;
+     background: none repeat scroll 0 0 #FFFFFF;
+     -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+	-moz-tap-highlight-color: rgba(0,0,0,0) !important;
+}
+.gwt-TextArea:focus{
+	font-family: arial,sans-serif;
+	color: #9e9e9e;
+     font-size: 16px;
+     resize: none;
+     border: 1px solid #CECECE;
+     border-radius: 0 !important;
+     background: none repeat scroll 0 0 #FFFFFF;
+}
+.demo-resize-edge{
+	display : none !important;
+}
+
+.gwt-Button{
+	background-color: #119Dc9;
+    border: none;
+    padding: 5px;
+    color: #FFF;
+    outline: none;
+    box-shadow: 0px 0px 1px 0px #119Dc9;
+    margin: 5px;
+}
+
+.gwt-Button:ACTIVE {
+	box-shadow: 0px 0px 5px 0px #119Dc9;
+}
+
+.gwt-Button:disabled{
+	background-color: #ccc !important;
+    box-shadow: 0px 0px 5px #CCC !important;
+    border: none !important;
+    cursor: not-allowed !important;
+}
+

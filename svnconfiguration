@@ -1,0 +1,88 @@
+url:http://help.collab.net/index.jsp?topic=/csvn/action/installcsvnonlinux.html
+
+1)Install java (copy from any server)
+
+2)vi /etc/profile
+JAVA_HOME=/usr/java/jdk1.7.0_02
+JRE_HOME=/usr/java/jdk1.7.0_02/jre
+pathmunge /usr/java/jdk1.7.0_02/bin
+export JAVA_HOME JRE_HOME 
+:wq
+
+3)copy this file CollabNetSubversionEdge-1.3.3_linux-x86_64.tar.gz    from old svn server
+
+4)tar -zxvf CollabNetSubversionEdge-1.3.3_linux-x86_64.tar.gz
+
+5)useradd svn
+
+6)chown svn.svn (untared file)
+
+7)cd csvn (folder created after untar)
+
+8)su svn
+9)cd csvn
+10)bin/csvn start
+11)in browser check http://svn1.glaceemr.com:3343/csvn
+
+12)user name:admin
+   passwd:admin (default)
+
+13)Once you've logged in, use the Getting Started wizard to do the following:
+Change the password for the admin account by clicking the user name in the upper right corner of the screen and updating the information in the Edit User page.
+
+server configuration
+
+14)Click Server Settings as the second step of the Getting Started wizard or from the left panel after selecting Administration in the main navigation bar.
+The following fields are provided values. Make changes as appropriate.
+Hostname: This is the fully qualified hostname including the domain of your Subversion Edge Apache server. For example, cu001.cubit.abc.collab.net.
+Port: For Windows, the default is the standard port 80. On Linux, you need to perform some additional setup to use a standard port such as port 80, or port 443 if you want to turn on SSL and use HTTPS. When you select a reserved port, examples of what you need to do will be displayed. To run the server on any port less than 1024, you need read access. The system will check for this as well.
+Repository Directory: This is the path to the parent directory for your Subversion Edge repositories. The default is /data/repositories in the location where you installed Subversion Edge. If you have existing repositories you want to connect to the web console, you could enter that location instead.
+Backup Directory: Repository dump files are stored in this location under the name of the repository. The default is /data/dumps in the location where you installed Subversion Edge.
+Specify whether you want encryption for the Subversion server. If you enable this setting, you will be provided the Advanced Configuration link to set up custom SSL directives.
+Provide the site administrator's name, email address, and alternative contact information such as a phone number or another email address.
+Apache error messages print the administrator's name and email address.
+
+Specify whether the Subversion Edge console should require HTTPS.
+In release 1.2 and later, Subversion Edge is pre-configured to run SSL on port 4434 using a self-signed certificate, in addition to the existing HTTP on port 3343. If you set HTTPS as a requirement for the console, all requests on port 3343 will get redirected to port 4434. Users who'll be accessing Subversion Edge via SSL will need to accept the certificate warnings unless you purchase an official SSL certificate from a trusted Certificate Authority.
+
+If you've configured Apache for SSL, it will be set to use the same self-signed certificate as the console.
+
+Click Save.
+
+
+Connect an existing repository
+To start managing your existing repositories with the web interface, you need to first make Subversion Edge aware of their location.
+
+There are two ways to connect an existing repository:
+Provide the path to your repository while configuring CollabNet Subversion Edge.
+Move your repository to the default parent directory location.
+Depending on how you choose to connect your repositories, do one of the following:
+In the main navigation bar, select Administration. In the Server Settings page, provide the path to your repositories in the Repository Directory field.
+Manually move your repositories into the default parent repository directory - /data/repositories in the location where you installed CollabNet Subversion.
+Select Repositories in the main navigation bar and click Discover.
+Your existing repositories are listed. When you visit this page for the first time after a repository is discovered, you might see a message about fixing repository permissions on a Linux system. Subversion Edge requires that repository files and directories be writable, which may not be the case with imported repositories.
+
+If filesystem permission changes are required, do the following:
+Select the repository and click Info. You'll see an example of the command for the fix.
+Apply the fix and click Validate Permissions.
+
+
+
+once all are done
+
+cd /usr/share/csvn
+su svn
+bin/svnadmin dump data/repositories/glace > glace.dump (to take dump)-in old server
+bin/svnadmin create data/repositories/glace(repo-name)-in new server
+bin/svnadmin load data/repositories/glace < glace.dump (to restore dump)-in new server
+
+scp used to send the dump files
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+.selectionResultWraper{
+	margin-top: 2px;
+	border: 1px solid #ccc;
+	width: 150px;
+}
+
+.selectionButtonWraper{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.selectedResultWraper{
+	
+}
+
+.container{
+	height: 100px;
+	display: flex;
+}
+
+.buttons{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #CCCCCC;
+    font-size: large;
+    margin: 2px;
+    
+}

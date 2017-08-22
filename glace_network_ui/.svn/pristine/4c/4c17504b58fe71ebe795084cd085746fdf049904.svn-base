@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
+	
+	<ui:with field="resources" type="com.glenwood.network.client.resource.DesktopResources" />
+	
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		
+		<g:FlowPanel height="119px" styleName="{resources.selectionControl.container}">
+			<g:FlowPanel ui:field="inputFilter">
+				<g:TextBox ui:field="textSearcher" height="25px" width="150px"/>
+				<g:Label ui:field="noResult" text="No results found..." visible="false"/>
+				<!-- <a:ShowMorePagerPanel  height="92px" ui:field="searchResultBody"/> -->
+				<!-- <g:ScrollPanel height="92px" ui:field="searchResultScroller"  styleName="{resources.selectionControl.selectionResultWraper}">
+					<g:FlowPanel height="100%" ui:field="searchResultBody"/>
+				</g:ScrollPanel> -->
+			</g:FlowPanel>
+			
+			<g:FlowPanel styleName="{resources.selectionControl.selectionButtonWraper}">
+				<g:FlowPanel>
+					<g:FocusPanel ui:field="remove" styleName="{resources.selectionControl.buttons}">
+						<b:Icon type="FORWARD" />
+					</g:FocusPanel>
+					<g:FocusPanel ui:field="add" styleName="{resources.selectionControl.buttons}">
+						<b:Icon type="BACKWARD" />
+					</g:FocusPanel>
+				</g:FlowPanel>
+			</g:FlowPanel>
+			
+			<g:ScrollPanel height="119px" styleName="{resources.selectionControl.selectionResultWraper}">
+				<g:FlowPanel height="100%" ui:field="resultDropper" styleName="{resources.selectionControl.selectedResultWraper}"/>
+			</g:ScrollPanel>
+			
+		</g:FlowPanel>
+		
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 

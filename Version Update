@@ -1,0 +1,122 @@
+If Tomcat8 means
+==========
+cat /usr/share/tomcatInstances/instancesHome/Instance1/conf/Catalina/localhost/Glace.xml
+
+sftp -oPort=8444  glenwood@ftp.glaceemr.com
+Gl3nw00d$3cr3FTP!
+get Temp/file.zip
+
+cd file
+
+yes | cp CacheResponseStream.java /var/version/GlaceR14/WEB-INF/src/com/glenwood/hcare/actions/filter/
+yes | cp GZIPResponseStream.java /var/version/GlaceR14/WEB-INF/src/com/glenwood/hcare/actions/filter/
+yes | cp FilterServletOutputStream.java /var/version/GlaceR14/WEB-INF/src/com/glenwood/hcare/filter/
+
+
+Stop Services ==> Tomcat, Iptables
+
+
+On Monday 31 July 2017 03:38 PM, Gaja wrote:
+ svn up /var/version/GlaceR14
+ cd /var/version/GlaceHome/
+ cat svnconfig/GlaceUpdateNcompile.xml
+ sh GlaceSVN.sh compile
+ sh pro.sh
+
+
+ 2. DB fixes - cd /var/version/PatchUpdate/R14Jan2016
+
+
+ 3. iPad - cd /var/version/GlaceGERRIT/
+
+www24 server
+
+rsync -azrv /var/GlaceGERRIT_PCP/target/glaceemr_ui-5.0-SNAPSHOT santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/
+
+In Account Server
+cd /var/version/GlaceGERRIT/
+mv target target_Aug8
+mkdir target
+cd target
+rsync -azrv santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/glaceemr_ui-5.0-SNAPSHOT .
+
+4. 24.81 spring server - spring
+
+check Tom8 or Tom7
+
+Tom8
+=====
+rsync -azrv /var/SVNCOPY/GlaceSpringTomcat8/application.properties santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/
+rsync -azrv /var/SVNCOPY/GlaceSpringTomcat8/target santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/
+
+Tom7
+=====
+rsync -azrv /var/SVNCOPY/GlaceSpringTomcat7/application.properties santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/Tom7/
+rsync -azrv /var/SVNCOPY/GlaceSpringTomcat7/target santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/Tom7/
+
+
+In Account Server
+cd /var/version/GlaceSpring/
+
+Tom8
+=====
+rsync -azrv santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/application.properties .
+rsync -azrv santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/target .
+
+Tom7
+=====
+rsync -azrv santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/Tom7/application.properties .
+rsync -azrv santhos@waterbury.glaceemr.net:/tmp/Aug10_VU/Tom7/target .
+
+service tomcat_Instance1 restart
+service tomcat_Instance2 restart
+service tomcat_Instance3 restart
+service tomcat_Instance4 restart
+service tomcat_Instance5 restart
+service tomcat_Instance6 restart
+
+
+locate ERAScreenEntriesTableDetails.xml
+
+ cd /var/shared/werlichshared/ERA/
+
+ mkdir Screenentriesconfig
+ chmod 777 -Rf Screenentriesconfig
+ cd Screenentriesconfig
+
+ in context file Glace.xml in all instances - privileged="true"
+ /usr/share/tomcatInstances/instancesHome/Instance1/conf/Catalina/localhost/Glace.xml
+
+ in codebase /var/version/GlaceR14/WEB-INF/web.xml
+
+<web-app metadata-complete="true">
+<absolute-ordering />
+
+
+
+ in  tomcat web.xml 
+/usr/share/tomcatInstances/instancesHome/Instance1/conf/web.xml
+
+ - search for <load-on-startup>3</load-on-startup>
+ <servlet>
+          <servlet-name>jsp</servlet-name>
+ <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+          <init-param>
+              <param-name>fork</param-name>
+             <param-value>false</param-value>
+          </init-param>
+          <init-param>
+              <param-name>xpoweredBy</param-name>
+              <param-value>false</param-value>
+         </init-param>
+
+         <load-on-startup>3</load-on-startup>
+      </servlet>
+
+
+ add this tag
+ <init-param>
+      <param-name>mappedfile</param-name>
+     <param-value>false</param-value>
+  </init-param>
+
